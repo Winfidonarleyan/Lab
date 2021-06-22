@@ -69,7 +69,7 @@ void GetNumbers()
         fileText = fileText.substr(found + 2LL);
     else
     {
-        fmt::print("> In file {}\n", FILE_PATH);
+        fmt::print("> In file {} no found array\n", FILE_PATH);
         return;
     }
 
@@ -78,7 +78,7 @@ void GetNumbers()
         auto number = Warhead::StringTo<uint32>(str);
         if (!number)
         {
-            fmt::print("> Number {} is incorrect!", STRING_VIEW_FMT_ARG(str));
+            fmt::print("> Number {} is incorrect!", str);
             continue;
         }
 
